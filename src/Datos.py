@@ -20,6 +20,11 @@ def replace_word(filename, palabra1, palabra2):
     
     with open(filename,'r') as file:
         print(file.read())
+
+def count_chars(filename): 
+    with open(filename,'r') as file: 
+        text = file.read().strip()  
+        print(len(text)) 
 def main():
     #Tu código va aquí. Mantén la indentación
     pass # borra esta línea cuando con inicies tu código
