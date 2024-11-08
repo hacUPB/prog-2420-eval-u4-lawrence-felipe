@@ -1,3 +1,10 @@
+import os
+import csv
+import matplotlib.pyplot as plt
+
+#funcion1 
+def list_files():
+    print(os.listdir()) #imprime una lista de los archivos contenidos en el directorio actual 
 
 def main():
     #Tu código va aquí. Mantén la indentación
