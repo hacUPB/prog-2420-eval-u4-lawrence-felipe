@@ -1,10 +1,14 @@
 import os
 import csv
 import matplotlib.pyplot as plt
-
-#funcion1 
+ 
 def list_files():
-    print(os.listdir()) #imprime una lista de los archivos contenidos en el directorio actual 
+    print(os.listdir()) 
+
+def count_words(filename): 
+    with open(filename,'r') as file: 
+        palabras = file.read().split()  
+        print(len(palabras)) 
 
 def main():
     #Tu código va aquí. Mantén la indentación
