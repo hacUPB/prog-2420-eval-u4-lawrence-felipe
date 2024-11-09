@@ -51,38 +51,68 @@ def main():
         
          plt.plot(data) 
          plt.show() 
+
  
  def main():
-    while True:
-        print('Bienvenido!')
-        print('\n')
-        print('1. Ver archivos en la ruta actual')
-        print('2. Archivo de texto (.txt)')
-        print('3. Archivo CSV (.csv)')
-        print('4. Salirse del programa')
-        option = int(input('Por favor seleccione una opcion:'))
-
-        if option == 1:
-            list_files()
-        elif option == 2:
-            filename = input('Ingrese el nombre del archivo (.txt):  ')
-            print('\n')
-            print('1. Contar numero de palabras')
-            print('2. Reemplazar una palabra por otra')
-            print('3. Contar el numero de caracteres')
-            option2 = int(input('Por favor seleccione una opcion:  '))
-
-            if option2 == 1:
-                count_words(filename)
-            elif option2 == 2:
-                palabra1 = input('Por favor escriba la palabra que desea reemplazar:  ')
-                palabra2 = input('Por favor escriba la palabra por la que quiere reemplazar:  ')
-                replace_word(filename, palabra1, palabra2)
-            elif option2 == 3:
-                count_chars(filename)
-            else:
-                print('Opcion no valida')
+     while True:
+         print('Bienvenido!')
+         print('\n')
+         print('1. Ver archivos en la ruta actual')
+         print('2. Archivo de texto (.txt)')
+         print('3. Archivo CSV (.csv)')
+         print('4. Salirse del programa')
+         option = int(input('Por favor seleccione una opcion:'))
+ 
+         if option == 1:
+             list_files()
+         elif option == 2:
+             filename = input('Ingrese el nombre del archivo (.txt):  ')
+             print('\n')
+             print('1. Contar numero de palabras')
+             print('2. Reemplazar una palabra por otra')
+             print('3. Contar el numero de caracteres')
+             option2 = int(input('Por favor seleccione una opcion:  '))
+ 
+             if option2 == 1:
+                 count_words(filename)
+             elif option2 == 2:
+                 palabra1 = input('Por favor escriba la palabra que desea reemplazar:  ')
+                 palabra2 = input('Por favor escriba la palabra por la que quiere reemplazar:  ')
+                 replace_word(filename, palabra1, palabra2)
+             elif option2 == 3:
+                 count_chars(filename)
+             else:
+                 print('Opcion no valida')
+ 
+         elif option == 3:
+             filename = input('Ingrese el nombre del archivo (.csv):  ')
+             print('\n')
+             print('1. Ver las primeras 15 filas del archivo')
+             print('2. Calcular estadisticas')
+             print('3. Graficar una columna completa de los datos')
+             option3 = int(input('Por favor seleccione una opcion:  '))
              
+             if option3 == 1:
+                 with open(filename,'r') as file:
+                     reader = csv.reader(file)
+                     for i in range(15):
+                         print(next(reader))
+ 
+             elif option3 == 2:
+                 columna = input('Por favor escriba el nombre de la columna que desea seleccionar:  ')
+                 calcular_estadisticas(filename, columna)
+                 
+             elif option3 == 3:
+                 columna = input('Por favor escriba el nombre de la columna que desea graficar:  ')
+                 graficar_columna(filename, columna)
+             
+             else:
+                 print('Opcion no valida')
+         
+         elif option == 4:
+             break
+         else:
+             print('Opcion no valida')
  pass 
  
 
