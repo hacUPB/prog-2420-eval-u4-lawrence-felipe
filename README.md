@@ -189,3 +189,59 @@ Muestra un submenú específico para archivos CSV con tres opciones:
 
 Dependiendo de la selección, el programa llama a una de las funciones correspondientes:
 
+#### 1. Ver Primeras 15 Filas:
+
+        if option3 == 1:
+            with open(filename, 'r') as file:
+                reader = csv.reader(file)
+                for i in range(15):
+                    print(next(reader))
+
+Abre el archivo CSV y muestra las primeras 15 filas.
+
+#### 2. Calcular Estadísticas:
+
+        elif option3 == 2:
+            columna = input("Por favor escriba el nombre de la columna que desea seleccionar:  ")
+            calcular_estadisticas(filename, columna)
+
+
+Solicita el nombre de una columna.
+
+Llama a *calcular_estadisticas(filename, columna)*, que calcula y muestra el promedio, máximo y mínimo de la columna.
+
+#### 3. Graficar Columna:
+
+        elif option3 == 3:
+            columna = input("Por favor escriba el nombre de la columna que desea graficar:  ")
+            graficar_columna(filename, columna)
+
+Solicita el nombre de la columna.
+
+Llama a *graficar_columna(filename, columna)*, que grafica los datos de la columna.
+
+
+#### 4. Opción Inválida:
+
+        else:
+            print("Opcion no valida")
+
+Muestra un mensaje si la opción no es válida.
+
+
+**Opción 4: Salir del Programa**
+
+    elif option == 4:
+        break
+
+Termina el bucle while y, por ende, finaliza el programa.
+
+---
+
+### 4. Ejecución del Programa
+
+    if __name__ == "__main__":
+        main()
+
+Verifica que el archivo se ejecute directamente y llama a main() para iniciar el programa.
+
