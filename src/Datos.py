@@ -5,40 +5,40 @@ def main():
  import matplotlib.pyplot as plt
   
  def list_files():
-     print(os.listdir()) 
+     print(os.listdir()) #imprime una lista de los archivos contenidos en el directorio actual
  
- def count_words(filename): 
-     with open(filename,'r') as file: 
-         palabras = file.read().split()  
-         print(len(palabras)) 
+ def count_words(filename): #funcion que toma como argumento el nombre del archivo
+     with open(filename,'r') as file: #abre el archivo como solo lectura
+         palabras = file.read().split()  #lee todo el archivo y lo divide en palabras como una lista
+         print(len(palabras)) #cuenta el numero de palabras en la lista y lo imprime
  
- def replace_word(filename, palabra1, palabra2):
-     with open(filename,'r') as file:
-         data = file.read() 
-         data = data.replace(palabra1, palabra2) 
+ def replace_word(filename, palabra1, palabra2):  #-funcion que toma como argumento el nombre del archivo y dos palabras
+     with open(filename,'r') as file: #abre el archivo como solo lectura
+         data = file.read() #lee todo el archivo y lo guarda en la variable data
+         data = data.replace(palabra1, palabra2) #reemplaza la palabra1 por la palabra2 con la funcion replace()
      
-     with open(filename,'w') as file: 
-         file.write(data) 
+     with open(filename,'w') as file: #abre el archivo para sobreescribirlo
+         file.write(data) #escribe el contenido de la variable data en el archivo
      
-     with open(filename,'r') as file:
-         print(file.read())
+     with open(filename,'r') as file: #abre el archivo como solo lectura
+         print(file.read()) #-imprime el contenido del archivo con la palabra cambiada
  
- def count_chars(filename): 
-     with open(filename,'r') as file: 
-         text = file.read().strip()  
-         print(len(text)) 
+ def count_chars(filename): #funcion que toma como argumento el nombre del archivo
+     with open(filename,'r') as file: #abre el archivo como solo lectura
+         text = file.read().strip()  #lee todo el archivo y le quita los espacios blancos 
+         print(len(text)) #cuenta el numero de caracteres en el archivo y lo imprime
  
- def calcular_estadisticas(filename, columna): 
-     with open(filename,'r') as file: 
-         reader = csv.reader(file) 
-         headers = next(reader) 
-         index = headers.index(columna) 
-         data = [] 
-         for row in reader: 
-             data.append(float(row[index])) 
-         print('Promedio:', sum(data)/len(data))
-         print('Maximo:', max(data)) 
-         print('Minimo:', min(data))
+ def calcular_estadisticas(filename, columna): #-funcion que toma como argumento el nombre del archivo y el nombre de la columna
+     with open(filename,'r') as file: #abre el archivo como solo lectura
+         reader = csv.reader(file) #lee el archivo como un archivo csv
+         headers = next(reader) #guarda la primera fila del archivo en la variable headers
+         index = headers.index(columna) #busca el indice de la columna en la lista headers
+         data = [] #crea una lista vacia
+         for row in reader: #itera sobre las filas del archivo
+             data.append(float(row[index])) #agrega el valor de la columna a la lista data
+         print('Promedio:', sum(data)/len(data)) #imprime el promedio de los valores de la lista data
+         print('Maximo:', max(data)) #imprime el valor maximo de la lista data
+         print('Minimo:', min(data)) #-imprime el valor minimo de la lista data
  
  def graficar_columna(filename, columna): 
      with open(filename,'r') as file: 
