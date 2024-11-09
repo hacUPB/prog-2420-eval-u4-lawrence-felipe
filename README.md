@@ -110,22 +110,22 @@ El bucle while True asegura que el programa continúe ejecutándose hasta que el
 El programa utiliza *if*, *elif*, y *else* para manejar la opción seleccionada por el usuario.
 
 
-**Opción 1: Listar archivos en el directorio actual**
+- **Opción 1: Listar archivos en el directorio actual**
 
-    if option == 1:
-        list_files()
+        if option == 1:
+            list_files()
 
 Llama a la función *list_files()*, que imprime una lista de archivos en el directorio actual.
 
 
-**Opción 2: Operaciones en archivos de texto**
+- **Opción 2: Operaciones en archivos de texto**
 
-    elif option == 2:
-        filename = input("Ingrese el nombre del archivo (.txt):  ")
-        print("\n1. Contar numero de palabras")
-        print("2. Reemplazar una palabra por otra")
-        print("3. Contar el numero de caracteres")
-        option2 = int(input("Por favor seleccione una opcion:  "))
+        elif option == 2:
+            filename = input("Ingrese el nombre del archivo (.txt):  ")
+            print("\n1. Contar numero de palabras")
+            print("2. Reemplazar una palabra por otra")
+            print("3. Contar el numero de caracteres")
+            option2 = int(input("Por favor seleccione una opcion:  "))
 
 Solicita el nombre de un archivo de texto.
 Muestra un submenú específico para archivos de texto con tres opciones:
@@ -171,14 +171,14 @@ Llama a *count_chars(filename)*, que cuenta el número de caracteres y muestra e
 Muestra un mensaje si la opción no es válida.
 
 
-**Opción 3: Operaciones en archivos CSV**
+- **Opción 3: Operaciones en archivos CSV**
 
-    elif option == 3:
-        filename = input("Ingrese el nombre del archivo (.csv):  ")
-        print("\n1. Ver las primeras 15 filas del archivo")
-        print("2. Calcular estadisticas")
-        print("3. Graficar una columna completa de los datos")
-        option3 = int(input("Por favor seleccione una opcion:  "))
+        elif option == 3:
+            filename = input("Ingrese el nombre del archivo (.csv):  ")
+            print("\n1. Ver las primeras 15 filas del archivo")
+            print("2. Calcular estadisticas")
+            print("3. Graficar una columna completa de los datos")
+            option3 = int(input("Por favor seleccione una opcion:  "))
 
 Solicita el nombre de un archivo CSV.
 
@@ -243,5 +243,8 @@ Termina el bucle while y, por ende, finaliza el programa.
     if __name__ == "__main__":
         main()
 
+
 Verifica que el archivo se ejecute directamente y llama a main() para iniciar el programa.
 
+
+***Esta es una explicacion detallada de cada parte del codigo, explicando su funcion y que usa para cumplir dicha funcion.***
