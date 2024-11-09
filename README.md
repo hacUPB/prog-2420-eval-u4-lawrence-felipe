@@ -2,6 +2,8 @@
 # Unidad 3
 ---
 ## Documentación del proyecto
-Nombre:  
-ID:  
+Nombre:  Lawrence Barrientos M - Felipe Gomez P 
+ID:  000311633 - 000511279
 ---
+
+Explicacion del codigo:
