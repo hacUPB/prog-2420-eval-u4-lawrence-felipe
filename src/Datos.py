@@ -40,18 +40,17 @@ def main():
          print('Maximo:', max(data)) #imprime el valor maximo de la lista data
          print('Minimo:', min(data)) #-imprime el valor minimo de la lista data
  
- def graficar_columna(filename, columna): 
-     with open(filename,'r') as file: 
-         reader = csv.reader(file) 
-         headers = next(reader) 
-         index = headers.index(columna) 
-         data = [] 
-         for row in reader: 
-             data.append(float(row[index])) 
+ def graficar_columna(filename, columna): #funcion que toma como argumento el nombre del archivo y el nombre de la columna
+     with open(filename,'r') as file: #abre el archivo como solo lectura
+         reader = csv.reader(file) #lee el archivo como un archivo csv
+         headers = next(reader) #guarda la primera fila del archivo en la variable headers
+         index = headers.index(columna) #busca el indice de la columna en la lista headers
+         data = [] #crea una lista vacia
+         for row in reader: #itera sobre las filas del archivo
+             data.append(float(row[index])) #agrega el valor de la columna a la lista data
         
-         plt.plot(data) 
-         plt.show() 
-
+         plt.plot(data) #grafica los valores de la lista data (Necesito el pip para poder ejecutar la grafica.)
+         plt.show() #muestra la grafica
  
  def main():
      while True:
