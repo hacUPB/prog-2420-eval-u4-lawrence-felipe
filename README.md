@@ -2,8 +2,8 @@
 # Unidad 3
 ---
 ## Documentación del proyecto
-Nombre:  Lawrence Barrientos M - Felipe Gomez P 
-ID:  000311633 - 000511279
+## Nombre:  Lawrence Barrientos M - Felipe Gomez P 
+## ID:  000311633 - 000511279
 ---
 
 ## Explicacion del codigo:
@@ -14,11 +14,13 @@ ID:  000311633 - 000511279
     import csv
     import matplotlib.pyplot as plt
 
-**os:** Proporciona funciones para interactuar con el sistema operativo.
+- **os:** Proporciona funciones para interactuar con el sistema operativo.
 
-**csv:** Permite leer y escribir archivos en formato CSV.
+- **csv:** Permite leer y escribir archivos en formato CSV.
 
-**matplotlib.pyplot:** Biblioteca para crear gráficos.
+- **matplotlib.pyplot:** Biblioteca para crear gráficos.
+
+---
 
 ### 2. Funciones del Programa
 
@@ -87,6 +89,7 @@ Lee el archivo CSV, obtiene la columna **columna** y muestra el promedio, máxim
 
 Lee la columna **columna** de un archivo CSV y la grafica usando *matplotlib*.
 
+---
 
 ### 3. Función Principal *main()* Menu o intefaz del programa:
 
@@ -106,12 +109,14 @@ El bucle while True asegura que el programa continúe ejecutándose hasta que el
 #### 2. Manejo de Opciones
 El programa utiliza *if*, *elif*, y *else* para manejar la opción seleccionada por el usuario.
 
+
 **Opción 1: Listar archivos en el directorio actual**
 
     if option == 1:
         list_files()
 
 Llama a la función *list_files()*, que imprime una lista de archivos en el directorio actual.
+
 
 **Opción 2: Operaciones en archivos de texto**
 
@@ -121,4 +126,66 @@ Llama a la función *list_files()*, que imprime una lista de archivos en el dire
         print("2. Reemplazar una palabra por otra")
         print("3. Contar el numero de caracteres")
         option2 = int(input("Por favor seleccione una opcion:  "))
+
+Solicita el nombre de un archivo de texto.
+Muestra un submenú específico para archivos de texto con tres opciones:
+
+- Contar el número de palabras.
+
+- Reemplazar una palabra por otra.
+
+- Contar el número de caracteres.
+
+Dependiendo de la selección, el programa llama a una de las funciones correspondientes:
+
+#### 1. Contar Palabras:
+
+    if option2 == 1:
+        count_words(filename)
+
+Llama a *count_words(filename)*, que cuenta las palabras y las imprime.
+
+#### 2. Reemplazar Palabras:
+
+    elif option2 == 2:
+        palabra1 = input("Por favor escriba la palabra que desea reemplazar:  ")
+        palabra2 = input("Por favor escriba la palabra por la que quiere reemplazar:  ")
+        replace_word(filename, palabra1, palabra2)
+
+Solicita la palabra que se desea reemplazar (palabra1) y la palabra nueva (palabra2).
+
+Llama a *replace_word(filename, palabra1, palabra2)*, que realiza el reemplazo y muestra el contenido actualizado.
+
+#### 3. Contar Caracteres:
+
+    elif option2 == 3:
+        count_chars(filename)
+
+Llama a *count_chars(filename)*, que cuenta el número de caracteres y muestra el resultado.
+
+#### 4. Opción Inválida:
+
+    else:
+        print("Opcion no valida")
+
+Muestra un mensaje si la opción no es válida.
+
+
+**Opción 3: Operaciones en archivos CSV**
+
+    elif option == 3:
+        filename = input("Ingrese el nombre del archivo (.csv):  ")
+        print("\n1. Ver las primeras 15 filas del archivo")
+        print("2. Calcular estadisticas")
+        print("3. Graficar una columna completa de los datos")
+        option3 = int(input("Por favor seleccione una opcion:  "))
+
+Solicita el nombre de un archivo CSV.
+
+Muestra un submenú específico para archivos CSV con tres opciones:
+- Ver las primeras 15 filas del archivo.
+- Calcular estadísticas de una columna.
+- Graficar los datos de una columna.
+
+Dependiendo de la selección, el programa llama a una de las funciones correspondientes:
 
