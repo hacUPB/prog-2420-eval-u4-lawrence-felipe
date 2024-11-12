@@ -248,3 +248,7 @@ Verifica que el archivo se ejecute directamente y llama a main() para iniciar el
 
 
 ***Esta es una explicacion detallada de cada parte del codigo, explicando su funcion y que usa para cumplir dicha funcion.***
+
+*https://upbeduco-my.sharepoint.com/:v:/g/personal/lawrence_barrientosm_col_upb_edu_co/EdUui8WCR-pGjKuuxvHotr0BaQb9O-SzbBA4_tip4nNkKQ?e=YBPtbZ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D*
+
+Este es el link del video en el que se evidencia el funcionamiento del código 
